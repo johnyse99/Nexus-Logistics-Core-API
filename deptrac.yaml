@@ -1,0 +1,30 @@
+parameters:
+  paths:
+    - ./src
+  layers:
+    - name: Domain
+      collectors:
+        - type: className
+          regex: ^App\\.*\\Domain\\.*
+    - name: Application
+      collectors:
+        - type: className
+          regex: ^App\\.*\\Application\\.*
+    - name: Infrastructure
+      collectors:
+        - type: className
+          regex: ^App\\.*\\Infrastructure\\.*
+    - name: Shared
+      collectors:
+        - type: className
+          regex: ^App\\Shared\\.*
+  ruleset:
+    Domain:
+      - Shared
+    Application:
+      - Domain
+      - Shared
+    Infrastructure:
+      - Domain
+      - Application
+      - Shared

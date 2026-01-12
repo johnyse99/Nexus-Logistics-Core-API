@@ -1,0 +1,35 @@
+doctrine:
+  dbal:
+    url: "%env(resolve:DATABASE_URL)%"
+    # server_version: '16'
+    profiling_collect_backtrace: "%kernel.debug%"
+    use_savepoints: true
+    types:
+      shipping_id: App\Shipping\Infrastructure\Persistence\Doctrine\Type\ShippingIdType
+      weight: App\Shipping\Infrastructure\Persistence\Doctrine\Type\WeightType
+  orm:
+    auto_generate_proxy_classes: true
+    enable_lazy_ghost_objects: true
+    report_fields_where_declared: true
+    validate_xml_mapping: true
+    naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+    auto_mapping: true
+    mappings:
+      Shipping:
+        type: xml
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Shipping/Infrastructure/Persistence/Doctrine/Mapping"
+        prefix: 'App\Shipping\Domain\Model'
+        alias: Shipping
+      Warehouse:
+        type: xml
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Warehouse/Infrastructure/Persistence/Doctrine/Mapping"
+        prefix: 'App\Warehouse\Domain\Model'
+        alias: Warehouse
+      Audit:
+        type: xml
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Audit/Infrastructure/Persistence/Doctrine/Mapping"
+        prefix: 'App\Audit\Domain\Model'
+        alias: Audit

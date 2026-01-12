@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Shipping\Domain\Model\ShippingOrder" table="shipping_orders">
+        <id name="id" type="shipping_id" column="id">
+            <generator strategy="NONE" />
+        </id>
+
+        <field name="origin" type="string" />
+        <field name="destination" type="string" />
+        <field name="weight" type="weight" precision="10" scale="2" />
+        <!-- Note: Real implementation would use custom types for ID and Weight to map directly to
+        VO -->
+
+        <field name="senderEmail" type="string" />
+        <field name="carrier" type="string" nullable="true" />
+
+        <field name="status" type="string" enum-type="App\Shipping\Domain\Model\ShippingStatus" />
+        <field name="createdAt" type="datetime_immutable" />
+    </entity>
+
+</doctrine-mapping>

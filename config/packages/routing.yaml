@@ -1,0 +1,5 @@
+framework:
+  router:
+    strict_requirements: true
+    resource: "%kernel.project_dir%/config/routes.yaml"
+    type: yaml

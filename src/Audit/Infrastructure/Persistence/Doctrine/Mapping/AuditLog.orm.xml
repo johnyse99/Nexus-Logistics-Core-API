@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Audit\Domain\Model\AuditLog" table="audit_logs">
+        <id name="id" type="string" column="id">
+            <generator strategy="NONE" />
+        </id>
+
+        <field name="eventName" type="string" />
+        <field name="payload" type="json" />
+        <field name="occurredOn" type="datetime_immutable" />
+    </entity>
+
+</doctrine-mapping>

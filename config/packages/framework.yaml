@@ -1,0 +1,31 @@
+framework:
+  secret: "%env(APP_SECRET)%"
+  #http_method_override: false
+  #handle_all_throwables: true
+
+  # Statistics regarding the number of requests, etc.
+  # profiler:
+  #    enabled: true
+
+  # Configuration for the session
+  session:
+    handler_id: null
+    cookie_secure: auto
+    cookie_samesite: lax
+    storage_factory_id: session.storage.factory.native
+
+  #php_errors:
+  #    log: true
+
+  router:
+    utf8: true
+
+  property_info:
+    enabled: true
+
+  serializer:
+    enabled: true
+
+  # Configuration for various services
+  # translator: { fallbacks: ['en'] }
+  # validation: { email_validation_mode: html5 }

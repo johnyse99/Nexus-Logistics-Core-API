@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> doctrine/doctrine-bundle ###
+/config/secrets/
+###< doctrine/doctrine-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/bin/.phpunit/
+###< symfony/phpunit-bridge ###
+
+###> IDEs ###
+.idea/
+.vscode/
+*.swp
+*.swo
+###< IDEs ###
+
+###> Misc ###
+.DS_Store
+Thumbs.db
+execution_log.txt
+phpstan_errors.txt
+###< Misc ###
+=======
+=======
+>>>>>>> 41f2af96615b27d39e39b00cc677a9ebad687972
+manifest/cache/
+manifest/logs/
+manifest/tmp/
+symphony/
+workspace/uploads/
+install-log.txt
+<<<<<<< HEAD
+>>>>>>> 0e37a7bef9418ac7ff94c136edf33520ad83d56b
+=======
+>>>>>>> 41f2af96615b27d39e39b00cc677a9ebad687972

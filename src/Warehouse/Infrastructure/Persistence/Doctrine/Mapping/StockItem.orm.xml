@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Warehouse\Domain\Model\StockItem" table="stock_items">
+        <id name="id" type="string" column="id">
+            <generator strategy="NONE"/>
+        </id>
+        
+        <field name="sku" type="string" unique="true" />
+        <field name="quantityAvailable" type="integer" />
+        
+        <embedded name="location" class="App\Warehouse\Domain\Model\InventoryLocation" use-column-prefix="true" />
+        
+        <field name="updatedAt" type="datetime_immutable" />
+        
+        <!-- Optimistic Locking -->
+        <field name="version" type="integer" version="true" />
+    </entity>
+
+</doctrine-mapping>

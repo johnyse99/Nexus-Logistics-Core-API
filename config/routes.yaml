@@ -1,0 +1,12 @@
+controllers:
+  resource: ../src/
+  type: attribute
+
+app.swagger_ui:
+  resource: "@NelmioApiDocBundle/config/routing/swaggerui.xml"
+  prefix: /api/doc
+
+app.swagger:
+  path: /api/doc.json
+  methods: [GET]
+  defaults: { _controller: nelmio_api_doc.controller.swagger_json }

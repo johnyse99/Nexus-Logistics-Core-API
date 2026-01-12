@@ -1,0 +1,28 @@
+framework:
+  messenger:
+    default_bus: command.bus
+    buses:
+      command.bus:
+        middleware:
+          - doctrine_ping_connection
+          - doctrine_close_connection
+          - doctrine_transaction
+      query.bus:
+        middleware:
+          - doctrine_ping_connection
+          - doctrine_close_connection
+      event.bus:
+        default_middleware: allow_no_handlers
+        middleware:
+          - doctrine_ping_connection
+          - doctrine_close_connection
+
+    transports:
+      async:
+        dsn: "%env(MESSENGER_TRANSPORT_DSN)%"
+        retry_strategy:
+          max_retries: 3
+          delay: 1000
+
+    routing:
+      'App\Shipping\Domain\Model\Event\ShippingOrderCreatedEvent': async

@@ -1,0 +1,10 @@
+nelmio_api_doc:
+  documentation:
+    info:
+      title: Nexus Logistics Core API
+      description: Industrial Logistics Management System API
+      version: 1.0.0
+  areas: # This divides the documentation into different parts
+    default:
+      path_patterns:
+        - ^/api(?!/doc$) # Options to show in the documentation
