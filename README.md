@@ -73,6 +73,10 @@ Access the Swagger UI at:
 - **Event Bus**: decouples side effects (e.g., Audit Logging listens to `ShippingOrderCreatedEvent` and `ShippingOrderCancelledEvent`).
 - **Value Objects**: Validations (e.g., Weight limits, UUID formats) are encapsulated in the domain.
 
-## License
+---
 
-Proprietary
+📄 **License**
+This project is distributed under the MIT license. Its purpose is strictly educational and research-based, developed as an modular API for managing logistics solution.
+
+**Note for recruiters:**
+This project demonstrates my ability to design and implement complex systems using professional standards. It highlights my mastery of transactional integrity, clean architecture, and the development of resilient software capable of handling real-world failure scenarios.
