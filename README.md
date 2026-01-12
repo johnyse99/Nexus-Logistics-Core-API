@@ -4,6 +4,9 @@
 
 Nexus Logistics Core is a robust, modular API for managing industrial logistics, built with **Symfony 6.4**, **PHP 8.3**, and strictly following **Hexagonal Architecture (Ports & Adapters)** and **CQRS** (Command Query Responsibility Segregation) principles.
 
+<img width="1914" height="888" alt="preview" src="https://github.com/user-attachments/assets/2f195791-32ba-44ee-add0-faf76a63349d" />
+
+
 ## Features
 
 - **Strict Hexagonal Architecture**: Separation of Domain, Application, and Infrastructure layers.
